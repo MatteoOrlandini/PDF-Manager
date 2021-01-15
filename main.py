@@ -36,9 +36,11 @@ def unlock_PDf(source_folder, destination_folder, password):
 	for item in os.scandir(source_folder):
 		if ".pdf" in item.name:
 			file_name = item.name
-			mypdf = pikepdf.open(source_folder+"/"+file_name, password) # open the locked pdf in source folder
-
-			mypdf.save(destination_folder+"/"+file_name) # save the unlocked pdf in destination folder
+			try:
+				mypdf = pikepdf.open(source_folder+"/"+file_name, password = password) # open the locked pdf in source folder
+				mypdf.save(destination_folder+"/"+file_name) # save the unlocked pdf in destination folder
+			except pikepdf.PasswordError:
+				print("The password failed to open the file!")
 			
 			print ("\t\"" + file_name + "\"" + " unlocked")
 			count = count + 1
@@ -50,8 +52,7 @@ def lock_PDf(source_folder, destination_folder, password):
 		if ".pdf" in item.name:
 			file_name = item.name
 			mypdf = pikepdf.open(source_folder+"/"+file_name) # open the unlocked pdf in source folder
-
-			mypdf.save(destination_folder+"/"+file_name, password) # save the locked pdf in destination folder
+			mypdf.save(destination_folder+"/"+file_name, encryption = pikepdf.Encryption(owner = password, user = password)) # save the locked pdf in destination folder
 			
 			print ("\t\"" + file_name + "\"" + " locked")
 			count = count + 1
