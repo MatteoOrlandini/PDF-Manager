@@ -72,7 +72,7 @@ def main():
 		source_folder, destination_folder, password = read_configuration_file(file_name = "config.txt")
 	elif command_line:
 		source_folder = input('Insert source folder name: ')
-		destination_folder = input('Insert destination_folder folder name: ')
+		destination_folder = input('Insert destination folder folder name: ')
 		password = input('Insert password: ')
 	else:
 		parser.print_help()

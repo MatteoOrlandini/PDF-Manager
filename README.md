@@ -40,20 +40,20 @@ You can either use the configuration file `config.txt` (using argument `-f` or `
 
 ## Example
 
-If you want to use the configuration file `config.txt` and lock your PDF(s), you can type `python .\main.py -f -l`.
+* If you want to use the configuration file `config.txt` and lock your PDF(s), you can type `python .\main.py -f -l`.
 
-If you want to use the configuration file `config.txt` and unlock your PDF(s), you can type `python .\main.py -f -u`.
+* If you want to use the configuration file `config.txt` and unlock your PDF(s), you can type `python .\main.py -f -u`.
 
-If you want to use the command line and lock your PDF(s), you can type `python .\main.py -c -l`. Next, the command windows will show you 
+* If you want to use the command line and lock your PDF(s), you can type `python .\main.py -c -l`. Next, the command windows will show you 
 ```
 Insert source folder name:
-Insert destination_folder folder name:
+Insert destination folder folder name:
 Insert password:
 ```
 
-If you want to use the command line and unlock your PDF(s), you can type `python .\main.py -c -l`. Next, the command windows will show you 
+* If you want to use the command line and unlock your PDF(s), you can type `python .\main.py -c -l`. Next, the command windows will show you 
 ```
 Insert source folder name:
-Insert destination_folder folder name:
+Insert destination folder folder name:
 Insert password:
 ```
