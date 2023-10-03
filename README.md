@@ -14,6 +14,19 @@ This [python program](https://github.com/MatteoOrlandini/PDF-Manager/blob/master
 
 Open a command window and type `pip install pikepdf`
 
+If you are using ubuntu and python 3.8 or python 3.10, you may not be able to install the package since it s not available yet
+--Solution:
+**Create a virtual environment:**
+
+   To isolate the installation of `pikepdf` and prevent it from interfering with other Python packages, we will create a virtual environment within your project directory. Open your terminal and run the following command:
+```bash
+      python3 -m venv venv
+this will create a virtual envi named `venv` in your project directory
+then activate the virtual env;
+```bash 
+     source venv/bin/activate
+Activate the virtual env by runing the following command:
+     pip install pikepdf
 ### Edit the configuration file
 
 Open `config.txt` file and change the lines using a text editor. The first line is the name of the source folder where the original PDFs are, by default is "Original PDF". The second line is the name of the destination folder where the locked/unlocked PDFs will be saved, by default is "Modified PDF". The third line is the password, by default is "password".
